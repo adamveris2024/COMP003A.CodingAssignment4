@@ -1,4 +1,8 @@
-﻿namespace COMP003A.CodingAssignment4
+﻿// Author: Adam Verissimo
+// Course: COMP-003A
+// Faculty: Jonathan Cruz
+// Purpose: Inventory management application with a minimum of 10 elements in the collection.
+namespace COMP003A.CodingAssignment4
 {
     internal class Program
     {
@@ -11,6 +15,7 @@
             string productName = "";
             int productAmount = 0;
 
+            // Menu
             while (true)
             {
                 Console.WriteLine("Inventory Management System Menu:");
@@ -23,6 +28,7 @@
 
                 switch (choice)
                 {
+                    // 1. Add a product:
                     case 1:
                         if (count < products.Length)
                         {
@@ -40,7 +46,7 @@
                             Console.WriteLine("All slots are full.");
                         }
                         break;
-
+                    // 2. Update product quantity:
                     case 2:
                         Console.WriteLine("Enter product name of quantity you want to change: ");
                         productName = Console.ReadLine();
@@ -57,7 +63,7 @@
                             Console.WriteLine("Product could not be found. Please try again.");
                         }
                         break;
-
+                    // 3. View inventory summary:
                     case 3:
                         Console.WriteLine("\nInventory Summary:");
                         int quantity = 0;
@@ -79,6 +85,7 @@
                         Console.WriteLine("Invalid input. Please enter a valid number.");
                         break;
                 }
+                // 4. Exit
                 if (choice == 4)
                 {
                     break;
